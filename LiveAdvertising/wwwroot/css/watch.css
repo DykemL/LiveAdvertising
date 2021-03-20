@@ -55,6 +55,8 @@ body {
     max-height: 87px;
 }
 
+/* Changed */
 .iframe-stream {
+    width: 100%;
     min-height: 650px;
 }
