@@ -8,13 +8,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LiveAdvertising.Hubs;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+using LiveAdvertising.Models;
 
 namespace LiveAdvertising
 {
     public class Startup
     {
+        private readonly IConfiguration Configuration;
+
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationContext>(options => options.UseNpgsql(Configuration.GetConnectionString("HerokuPostgresConnection")));
+
             services.AddControllersWithViews();
             services.AddSignalR();
         }
