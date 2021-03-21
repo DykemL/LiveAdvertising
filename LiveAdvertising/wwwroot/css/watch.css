@@ -12,7 +12,7 @@ body {
     height: 100%;
 }
 
-.chat-messages {
+#chat-messages {
     display: flex;
     flex-direction: column;
     min-height: 300px;
@@ -26,13 +26,17 @@ body {
     flex-shrink: 0
 }
 
+.chat-message-text-right{
+    margin-right: 25px;
+}
+
 .chat-message-left {
     margin-right: auto
 }
 
 .chat-message-right {
     flex-direction: row-reverse;
-    margin-left: auto
+    margin-left: auto;
 }
 
 .product-img {
@@ -55,8 +59,32 @@ body {
     max-height: 87px;
 }
 
-/* Changed */
 .iframe-stream {
-    width: 100%;
-    min-height: 650px;
+    min-height: 500px;
+    height: 800px;
 }
+
+/* ChangedR */
+#profile {
+    min-height: 550px;
+    height: 800px;
+    overflow-x: auto;
+}
+
+/* ChangedR */
+#products {
+    min-height: 500px;
+    height: 750px;
+    overflow-x: auto;
+}
+
+.card{
+    margin-top: 10px;
+    width: 580px;
+    margin: 10px auto;
+}
+
+/* ChangedR */
+.btn-add-to-basket {}
+/* ChangedR */
+.buy-button {}
