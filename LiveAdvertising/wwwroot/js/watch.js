@@ -29,21 +29,10 @@
 			idsString += streamObject.productIds[i] + ",";
 		}
 		idsString = idsString.slice(0, -1);
-		//document.location.href = ;
 		let url = "https://hackathon.oggettoweb.com/checkout/cart/addmultiple/products/" + idsString + "/flush_cart/1";
 		var win = window.open(url, '_blank');
 		win.focus();
 	});
-
-	var obj = {
-		name: 1,
-		description: [123, "two", 3.0],
-		cost: "hello",
-		imgPath: "///"
-	};
-	var serialObj = JSON.stringify(obj);
-	localStorage.setItem("myKey", serialObj);
-	var returnObj = JSON.parse(localStorage.getItem("myKey"));
 };
 
 function switchButtonStatus(button) {
